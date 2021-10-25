@@ -5,14 +5,18 @@ st.title("Book recommendation system")
 st.subheader("Select your book and enjoy!")
 
 st.text("")
-book = st.text_input("Book title in lowercase")
-recommended_books = recommend(book)
-recommended_books = recommended_books[["book_title", "image_url"]]
+book = st.text_input("Enter the name of a book you like")
+
 
 if book:
-    columns1 = st.columns(5)
-    columns2 = st.columns(5)
-    for i in range(5):
-        columns[i].image(recommended_books["image_url"][i])
-    for i in range(5,10):
-        columns2[i-5].image(recommended_books["image_url"][i])
+    recommended_books = recommend(book)
+    recommended_books = recommended_books[["book_title", "image_url"]]
+    columns = st.columns(5)
+    n = 0
+    for x in range(5):
+        for i in range(n, n+3):
+            image = recommended_books["image_url"].iloc()[i]
+            if type(image) == str:
+                columns[x].image(image)
+            columns[x].text(recommended_books["book_title"].iloc()[i])
+        n += 3
