@@ -14,6 +14,7 @@ def recommend(book):
         st.text("Check out this insteresting books.")
         return df.sample(15)
     else:
+        st.subheader("Recommendations")
         selected_book = vectorizer.transform(libro["combined_features"])
         cosine_sim = cosine_similarity(X, selected_book)
         recommended = df.copy()
