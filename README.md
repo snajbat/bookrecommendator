@@ -33,6 +33,6 @@ Start
   
 ## Screenshot
 
-![App Screenshot]("https://github.com/snajbat/bookrecommendator/blob/be89d20a366c49ef3e3f7fc82c028da678c2afdd/img/Captura%20de%20pantalla%20(8).png")
+![App Screenshot](https://github.com/snajbat/bookrecommendator/blob/main/img/Captura%20de%20pantalla%20(8).png)
 
   
